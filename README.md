@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Weather Trend App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is developed to generate bulk report based on a location and a date window from OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## Items that were completed
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Country Lookup
+- City Lookup (required to make query)
+- Date picker.
 
-## Expanding the ESLint configuration
+## Items that could not be established
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Report file generation.
+  Reason: API integration is done but to generate historic weather data from OpenWeatherMap we need to buy a paid subscription.
+  I tried looking for alternatives but could not find any.
 
-- Configure the top-level `parserOptions` property like this:
+_Note: Trend will also be visibe when we will be able to extract the data from the API._
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation instruction
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Install all dependencies
+   `npm install`
+
+2. Run the project locally using
+   `npm run dev`

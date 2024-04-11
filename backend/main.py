@@ -2,9 +2,10 @@ import os
 import redis
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from typing import Union, List
 from dotenv import load_dotenv
-from services.weather import load_all_locations, get_weather_updates, add_new_location
+from services.weather import load_all_locations, get_weather_updates, add_new_location, generate_report
 from models.weather import Location, WeeklyWeatherUpdate, AddLocationRequest
 
 load_dotenv()
@@ -40,6 +41,10 @@ async def show_locations() -> List[Location]:
 @app.get("/weather_update/{location_hash}")
 async def read_item(location_hash: str) -> WeeklyWeatherUpdate:
     return await get_weather_updates(app.redis_connection, location_hash)
+
+@app.get("/download_report/{location_hash}")
+async def read_item(location_hash: str, start_date: str, end_date: str) -> StreamingResponse:
+    return await generate_report(app.redis_connection, start_date, end_date, location_hash)
 
 @app.post("/locations")
 async def add_location(request: AddLocationRequest):

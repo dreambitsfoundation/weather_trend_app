@@ -52,10 +52,12 @@ This application uses the following architecture.
 [Root diretory: `frontend`]
 
 1. Install all dependencies
-   `npm install`
+
+   - `npm install`
 
 2. Run the project locally using
-   `npm run dev`
+
+   - `npm run dev`
 
 ### Backend
 
@@ -63,19 +65,23 @@ This application uses the following architecture.
 Please setup `python-dotenv` as per your system preference. If requires!
 
 1. Create virtual env
-   `python -m venv venv`
+
+   - `python -m venv venv`
 
 2. Install all depenencies
-   `pip install -r requirements.txt`
+
+   - `pip install -r requirements.txt`
 
 3. Activate virtual environment
-   `$ cd venv/Scripts` - Windows
-   `$ cd venv/bin` - Linux and MacOS
 
-   `$ activate`
+   - `$ cd venv/Scripts` - Windows
+   - `$ cd venv/bin` - Linux and MacOS
+
+   - `$ activate`
 
 4. Run server locally
-   `$ uvicorn main:app --reload`
+
+   - `$ uvicorn main:app --reload`
 
 Note: Please update the .env file in the project root with Redis credentials.
 
@@ -85,16 +91,20 @@ Note: Please update the .env file in the project root with Redis credentials.
 Please setup `python-dotenv` as per your system preference. If requires!
 
 1. Create virtual env
-   `python -m venv venv`
 
-2. Install all depenencies
-   `pip install -r requirements.txt`
+   - `python -m venv venv`
 
-3. Activate virtual environment
-   `$ cd venv/Scripts` - Windows
-   `$ cd venv/bin` - Linux and MacOS
+2. Activate virtual environment
 
-   `$ activate`
+   - `$ cd venv/Scripts` - Windows
+   - `$ cd venv/bin` - Linux and MacOS
+
+   - `$ activate`
+
+3. Install all depenencies
+
+   - `pip install -r requirements.txt`
 
 4. Run application locally
-   `$ python run_locally.py`
+
+   - `$ python run_locally.py`

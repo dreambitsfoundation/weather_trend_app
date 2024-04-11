@@ -46,7 +46,7 @@ def store_last_update_to_redis(location):
     conn.json().set("locations", Path.root_path(), all_cities, decode_keys=True)
 
 
-def run(request):
+def run(request=None):
     """
     This method is used to load all the latest weather updates iteratively
     for all the indexed locations. This is a serverless script, ran through 

@@ -4,13 +4,15 @@ This application is developed to generate bulk report based on a location from O
 
 ## Live Application:
 
-1. UI: !(Frontend URL)[https://weather-trend-app-frontend.onrender.com]
-2. Backend Service (API Docs): !(Backend URL)[https://weather-trend-app-backend-service.onrender.com/docs]
-3. Serverless function: Application is deployed on GCP !(Invocation URL)[https://asia-south1-thefourthpillar.cloudfunctions.net/load_all_weather_updates]
+1. UI: https://weather-trend-app-frontend.onrender.com
+2. Backend Service (API Docs): https://weather-trend-app-backend-service.onrender.com/docs
+3. Serverless function: Application is deployed on GCP: https://asia-south1-thefourthpillar.cloudfunctions.net/load_all_weather_updates
 
 ## Throry of Development
 
 This project intends to have a UI that can register any city of choice though Restful APIs and capture weather updates for all the registered cities periodically throughout the day at an interval of 3-6 hours. Also the user should be capable of generating and downloading CSV files of reports in a date range.
+
+Note: Only Serverless function updates the weather data. Hence on registering a new city to watch list the API invokes the serverless function manually (only once) to update it's current weather report.
 
 # Architecture
 

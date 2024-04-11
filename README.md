@@ -2,6 +2,12 @@
 
 This application is developed to generate bulk report based on a location from OpenWeatherMap API.
 
+## Live Application:
+
+1. UI: !(Frontend URL)[https://weather-trend-app-frontend.onrender.com]
+2. Backend Service (API Docs): !(Backend URL)[https://weather-trend-app-backend-service.onrender.com/docs]
+3. Serverless function: Application is deployed on GCP !(Invocation URL)[https://asia-south1-thefourthpillar.cloudfunctions.net/load_all_weather_updates]
+
 ## Throry of Development
 
 This project intends to have a UI that can register any city of choice though Restful APIs and capture weather updates for all the registered cities periodically throughout the day at an interval of 3-6 hours. Also the user should be capable of generating and downloading CSV files of reports in a date range.
